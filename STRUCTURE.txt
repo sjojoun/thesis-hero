@@ -1,0 +1,43 @@
+论文转换项目/
+├── index.html
+├── package.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── tailwind.config.js
+├── postcss.config.js
+│
+├── public/
+│   └── favicon.svg
+│
+└── src/
+    ├── main.tsx                    # 入口
+    ├── App.tsx                     # 主布局 + 状态管理
+    ├── index.css                   # TailwindCSS + 自定义主题
+    │
+    ├── types/
+    │   └── index.ts                # 类型定义 + 模板配置（增强版）
+    │
+    ├── engine/
+    │   └── formattingEngine.ts     # 排版核心引擎（增强版）
+    │
+    ├── hooks/
+    │   └── usePaperProcessor.ts    # 自定义 Hook：封装排版流程
+    │
+    ├── lib/
+    │   └── utils.ts                # 工具函数（单位换算、文件大小格式化等）
+    │
+    └── components/
+        ├── Header.tsx              # 顶部 Header
+        ├── FileUploader.tsx        # 拖拽上传区
+        ├── TemplateSelector.tsx    # 模板选择器
+        ├── ParamPanel.tsx          # 排版参数微调面板
+        ├── StatusBar.tsx           # 解析状态展示
+        ├── ActionBar.tsx           # 底部操作栏
+        ├── PreviewCard.tsx         # 排版参数预览卡片
+        ├── CommerceBanner.tsx      # 商业化展示（纯前端展示）
+        └── ui/                     # Shadcn 风格的通用组件
+            ├── Card.tsx
+            ├── Button.tsx
+            ├── Select.tsx
+            └── Accordion.tsx

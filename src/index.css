@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply min-h-screen bg-surface;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+
+@layer components {
+  /* 上传区域拖拽高亮 */
+  .upload-zone-active {
+    @apply border-brand-500 bg-brand-50 ring-2 ring-brand-200;
+  }
+
+  /* 卡片阴影 */
+  .card-shadow {
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.04),
+      0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .card-shadow-hover {
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.06),
+      0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+
+  /* 参数面板滑条 */
+  .param-slider {
+    @apply w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer;
+  }
+
+  .param-slider::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 rounded-full bg-brand-600 cursor-pointer;
+    box-shadow: 0 1px 3px rgba(79, 70, 229, 0.3);
+  }
+
+  .param-slider::-moz-range-thumb {
+    @apply w-4 h-4 rounded-full bg-brand-600 cursor-pointer border-0;
+  }
+
+  /* 状态点动画 */
+  .status-dot {
+    @apply inline-block w-2 h-2 rounded-full;
+  }
+
+  .status-dot.idle {
+    @apply bg-gray-300;
+  }
+
+  .status-dot.processing {
+    @apply bg-brand-500 animate-pulse-soft;
+  }
+
+  .status-dot.success {
+    @apply bg-emerald-500;
+  }
+
+  .status-dot.error {
+    @apply bg-red-500;
+  }
+
+  /* 滚动条美化 */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
